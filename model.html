@@ -59,6 +59,18 @@
                 }
               });
             });
+
+            $(document).ready(function (){
+                var view = $(window);
+                var landing = $('.landing');
+                var bg = $('.landing .bg');
+                view.scroll(function (){
+                    if(view.scrollTop()<landing.outerHeight()) {
+                        bg.css('top',view.scrollTop()*0.4);
+                        bg.css('margin-top',view.scrollTop()*0.4);
+                    }
+                });
+            });
         </script>
     </body>
 </html>
